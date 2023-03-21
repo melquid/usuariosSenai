@@ -77,6 +77,9 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
   }
 
 
+ for (let index = 0; index < usuarios.length; index++) {
+
+    if (nomepage2 == usuarios[index].nome && usuarios[index].nivel == "1") {
   const inputdeletarusuarios1 = document.querySelector("#deletarusuarios1");
   inputdeletarusuarios1.addEventListener("click", deletarusuarios1)
 
@@ -108,6 +111,21 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
         userdeletado[index] = 0
       }
     }
+    for (let index = userdeletado.length - 1; index >= 0; index--) {
+      if (userdeletado[index] == 1) {
+        usuarios.splice(index, 1);
+      }
+    }
+    listarusuarios();
+  }
+  var nivela= 1;
+}
+
+  }
+
+  if(nivela != 1){
+    document.querySelector(".niveladm").innerHTML="<style>.niveladm{display:none;}</style>"
+  }
     for (let index = userdeletado.length - 1; index >= 0; index--) {
       if (userdeletado[index] == 1) {
         usuarios.splice(index, 1);
