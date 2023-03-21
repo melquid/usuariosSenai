@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unimel ADM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerL">
+        <div class="col col-1">
+          <a href="index.html"
+            ><img
+              src="Black Orange Minimalist Toga Education Logo.png"
+              alt="Logo"
+          /></a>
+        </div>
+      </div>
+
+      <div class="marque">
+        <marquee>Seu futuro so depende de você!</marquee>
+      </div>
+
+      <div class="poppy">
+        <a
+          href="https://api.whatsapp.com/send?phone=5531998651764&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20seu%20site%2C%20preciso%20de%20ajuda"
+          ><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player
+            src="https://assets2.lottiefiles.com/packages/lf20_6hrplbhl.json"
+            background="transparent"
+            speed="1"
+            style="width: 100px; height: 100px"
+            loop
+            autoplay
+          ></lottie-player
+        ></a>
+      </div>
+    </header>
+    <div class="containerAdm">
+      <div class="forLogin">
+
+        <p>Area Administativa</p>
+        <form>
+        <input type="text" id="usuario" placeholder="Digite seu usuário:" required minlength="3"/>
+        <br />
+
+        <input
+          type="password"
+          id="senha"
+          placeholder="Digite sua senha"
+        required minlength=1"/><br />
+        
+
+        <input type="button" value="LOGIN" onclick="testar()" /><br />
+        </form>
+      </div>
+      <script src="scrypt.js"></script>
+      <script> 
+      if(localStorage.getItem("section") == 1){
+        document.querySelector(".forLogin").innerHTML="Usuario já logado, deseja sair?"
+        document.querySelector(".forLogin").innerHTML+="<input type='button' value='sim' id='sairL' onclick='sairL'><a href='login2.html'><input type='button' value='nao'></a>"
+      }
+     </script>
+    </div>
+    <footer>
+      <div class="newsletter">
+        <form action="">
+          <label> Cadaste-se para ficar por dentro das novidades:</label><input type="email" name="email" placeholder="jhon@email.com" required><input type="submit" value="enviar">
+        </form>
+      </div>
+      <h3 class="coppy">UniMel - todos os direitos reservado @copyright - 2022</h3>
+    </footer>
+  </body>
+</html>

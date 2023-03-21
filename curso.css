@@ -1,0 +1,88 @@
+	
+		.sessao:nth-child(2n) {
+			background:#D8D8D8;
+			box-shadow: 2px 1px 20px 0px #00000061;
+			
+		}
+		.sessao{
+			padding: 30px 10px 
+		}
+		.cont0.cont2  img{
+			width: 100%;
+			height: 320px;
+			border-radius: 25px;
+			 object-fit: fill;
+		}
+		.cont{
+			display: flex;
+			max-width: 1144px;
+			width: 100%;
+			margin: auto;
+			justify-content: center;
+		}
+		
+		.cont0{
+			width: 50%;
+			text-align: center;
+			padding: 30px 20px;
+		}
+		.sessao:nth-child(2n) .cont{
+			flex-direction: row-reverse;
+		}
+		.titulo-curso{
+			background: rgba(0,0,0,0.55);
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			text-align: center;
+			margin: 0px;
+			font-size: 2em;
+						
+		}
+		.cont1 p{
+			font-family: 'Poppins', sans-serif;
+			font-weight: 600;
+			text-align: justify;
+		}
+		.titulo3{
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.5em;
+			text-align: center;
+   			font-weight: 500;
+			border-left: 5px solid orange;
+   			max-width: 1144px;
+   			width: 100%;
+   			margin-left: auto;
+   			margin-right: auto;
+			color: #191919;
+		}
+		.Matricular{
+			border-radius: 10px;
+			border: none;
+			background-color: green;
+			color: #fff;
+			padding: 10px 50px;	
+			font-size: 1em;
+			margin: auto;
+			display: block;
+			cursor: pointer;
+			margin-bottom: 30px;
+		}
+		.Matricular a{
+			color: #fff;
+		}
+		.slide{
+			background-image: url("../img/education-day-arrangement-on-a-table-with-copy-space.jpg");
+			margin: 0;
+			width: 100%;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-attachment: fixed;
+ 			background-position: bottom;
+			color: #FFF;
+		}
+        
