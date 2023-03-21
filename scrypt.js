@@ -1,26 +1,80 @@
 ﻿let usuarios = [
   {
     nome: "gabriel",
-    senha: "13"
+    senha: "13",
+    nivel: "1"
   },
   {
     nome: "gab",
-    senha: "13"
+    senha: "13",
+    nivel: "0"
   },
   {
     nome: "teste",
-    senha: "13"
+    senha: "13",
+    nivel: "0"
   },
   {
     nome: "aula",
-    senha: "13"
+    senha: "13",
+    nivel: "0"
   },
   {
     nome: "senai",
-    senha: "13"
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "senaiadm",
+    senha: "13",
+    nivel: "1"
+  },
+  {
+    nome: "novalima",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "carrefour",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "comput",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "natan",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "renata",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "ana",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "marcos",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "vini2022",
+    senha: "13",
+    nivel: "0"
+  },
+  {
+    nome: "bazartekshop",
+    senha: "13",
+    nivel: "1"
   }
 ]
-
 //********************************************************************************************************* */
 
 //********************************************************************************************************* */
