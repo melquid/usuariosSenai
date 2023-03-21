@@ -63,6 +63,15 @@
         document.querySelector(".forLogin").innerHTML="Usuario já logado, deseja sair?"
         document.querySelector(".forLogin").innerHTML+="<input type='button' value='sim' id='sairL' onclick='sairL'><a href='login2.html'><input type='button' value='nao'></a>"
       }
+          const sair = document.querySelector("input#sairL"); // capturando os dados do botão sair 
+  sair.addEventListener("click", sairdapagina) //onclick
+
+  function sairdapagina() {
+
+    localStorage.removeItem("usuarioLogado")
+    localStorage.removeItem("section")
+    window.location.href = "./login.html"
+  }
      </script>
     </div>
     <footer>
