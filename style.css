@@ -357,6 +357,11 @@ header .headerL img{
 .info{
 	max-width: 1144px;
 	width: 100%;
+	background:#ffffff;
+	margin: 40px 0px;
+	padding: 30px;
+	border: 2px solid red;
+	border-radius:10px
 	
 }
 .sect{
@@ -371,6 +376,7 @@ header .headerL img{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: black;
+	font-size:18px;
 }
 #adm{
     background-image: url("textura-de-papel-18009063.jpg");
@@ -383,4 +389,24 @@ table, th, td {
   }
 input[type="button"] {
     cursor: pointer;
+}
+.lista input[type="button"]{
+	width: 100%;
+	padding:9px 0px;
+	font-size:16px;
+	background:#ed4a1f;
+	color:#fff;
+	 font-weight: 700;
+	text-transform: capitalize;
+	border-radius:5px;
+	border:1px;
+	margin-top:25px;
+
+}
+.lista input[type="button"]:hover{
+	
+	background:#fd2200;
+
+	
+
 }
