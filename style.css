@@ -493,7 +493,7 @@ input[type="button"] {
    
 }
 .newsletter input[type="email"] {
-    width: 30%;
+    width: 30%!important;
     
 }	
 }
