@@ -117,9 +117,13 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
   function listarusuarios() {
     let lista = document.querySelector('div.lista');
     lista.innerHTML = "";
-    lista.innerHTML += "Listar usúario <br><br>"
+    lista.innerHTML += "<div class='linhal'><span class='colunal'>ID</span><span class='colunal2'>Cargo</span><span class='colunal3'>Nome</span></div>"
     for (let index = 0; index < usuarios.length; index++) {
-      lista.innerHTML += `Usúario ${index + 1} - ${usuarios[index].nome} <br>`
+		if(usuarios[index].nivel == "1"){
+			lista.innerHTML += '<div class="linhal"><span class="colunal">'+(index+1) +"</span><span class='colunal2'> administrador </span><span class='colunal3'>" + usuarios[index].nome+"</span></div>";
+		}else{
+      lista.innerHTML += '<div class="linhal"><span class="colunal">'+(index+1) +"</span><span class='colunal2'> Usuario </span><span class='colunal3'>" + usuarios[index].nome+"</span><br></div>";
+	  }
     }
   }
 
