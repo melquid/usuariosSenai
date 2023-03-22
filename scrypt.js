@@ -171,7 +171,7 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
       }
     }
     listarusuarios();
-  }
+  
   var nivela= 1;
 }
 
