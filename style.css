@@ -492,5 +492,8 @@ input[type="button"] {
 		padding: 0px 10px !important;
    
 }
-	
+.newsletter input[type="email"] {
+    width: 30%;
+    
+}	
 }
