@@ -102,7 +102,7 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
   function sairdapagina() {
 
     localStorage.removeItem("usuarioLogado")
-	localStorage.removeItem("cont")
+	localStorage.removeItem("section")
     window.location.href = "index.html"
   }
 
@@ -230,7 +230,21 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
     }
     let senha2 = document.querySelector(`input.inputsenha2`).value
 
-    if (novousuario.senha == senha2) {
+	
+if(novousuario.senha.length < 1 && senha2.length < 1){
+	alert("Obrigatorio preencher todos so campos")
+}else{
+	if (novousuario.senha.length < 1){
+		alert("Campo de senha vazio")
+	}else if(senha2.length < 1){
+		alert("Campo de confirmação de senha vazio")
+	}else if(novousuario.nome.length < 1){
+		alert("Campo de Usuario vazio")
+	}else{
+	  
+	
+
+		if (novousuario.senha == senha2) {
 
 
 
@@ -255,10 +269,9 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
       alert("Senha incorreta")
       adicionarusuarios1()
     }
-
-
-
-
+}
+}
+	
 
   } // fechamento da fuction
 
@@ -298,6 +311,10 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
     let errosenha = 1
     let repitida = 0
     let indice = 0
+	if(nome.length == 0 || nome1.length == 0 || senha.length == 0 || senha1.length == 0 || senha2.length == 0){
+      alert("Obrigatorio preencher todos os campos!")
+      repitida = 1
+    }else{
     for (let index = 0; index < usuarios.length; index++) {
       if (usuarios[index].nome == nome1) {
         if (usuarios[index].nome != nome) {
@@ -305,6 +322,7 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
         }
       }
     }
+	
 
 
     if (repitida == 0) {
@@ -339,7 +357,7 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
 
     }
   }
-
+}
 
 
 
@@ -401,28 +419,37 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
 } else { // tudo relacionado a pag 1
 		 
 function testar() {
-    localStorage.setItem("section", 1)
+   
     let nome = (document.querySelector('input#usuario')).value
     let senha1 = (document.querySelector('input#senha')).value
-
+	let inforL = document.querySelector(".infoL")
+if(nome.length < 1 && senha1.length < 1){
+	inforL.innerHTML="Campos Vazios!"
+}else if(senha1.length < 1){
+	inforL.innerHTML ="Obrigatorio preencher a Senha"
+}else if(nome.length < 1){
+	inforL.innerHTML ="Obrigatorio preencher o usuario"
+}else{
     for (let index = 0; index < usuarios.length; index++) {
 
       if (nome == usuarios[index].nome && senha1 == usuarios[index].senha) {
+		localStorage.setItem("section", 1)
         localStorage.setItem("usuarioLogado", usuarios[index].nome)
         index = usuarios.length
         window.location.assign("./login2.html")
 
 
       } else if (nome == usuarios[index].nome && senha1 != usuarios[index].senha) {
-        alert("senha errada");
+        inforL.innerHTML ="senha errada";
         index = usuarios.length;
       } else if (index == usuarios.length - 1) {
-        alert("usuário invalido")
+       inforL.innerHTML ="usuário invalido"
       }
 
     }
 
   }
+	}
 }
 
 
