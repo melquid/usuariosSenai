@@ -197,7 +197,7 @@ input[type="email"]#email{
  border: 1px solid #ed4923;
  width:100%;
  max-width:200px;
- min-width:150px;
+ min-width:100px;
  
 }
 .conteudoimg img{
