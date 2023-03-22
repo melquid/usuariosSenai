@@ -1,4 +1,4 @@
-﻿let usuarios = [
+let usuarios = [
   {
     nome: "gabriel",
     senha: "13",
