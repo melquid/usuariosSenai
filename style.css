@@ -410,3 +410,25 @@ input[type="button"] {
 	
 
 }
+.colunal, .colunal2, .colunal3{
+	border: 2px solid #000;
+	margin: 0.6px;
+	padding: 0.5px;
+	
+	
+}
+.linhal{
+	display: flex;
+}
+.colunal{
+	width: 40px;
+	text-align: center;
+}
+.colunal2{
+	width: 160px;
+}
+
+.colunal3{
+	width: 160px;
+}
+
