@@ -74,25 +74,27 @@ let usuarios = [
     senha: "13",
     nivel: "1"
   }
-];
+]
 //********************************************************************************************************* */
 
+
+
+
+
+
+//********************************************************************************************************* */
 
 //********************************************************************************************************* */
 
 let nomepage2 = localStorage.getItem("usuarioLogado") // pegar o nome de usuario logado no navegador
-
-
-
-
 //********************************************************************************************************* */
 
-if (nomepage2 != undefined) { // tudo relacionado a pag 2
-  
-  
 
+if (nomepage2 != undefined ) { // tudo relacionado a pag 2
+	
+ 
   let h2nome = document.querySelector("h2#nome")
-  h2nome.innerHTML += `Bem vindo, ${nomepage2}` // boas vindas ao nome do usuario (ola maria)
+  h2nome.innerHTML += `${nomepage2}` // boas vindas ao nome do usuario (ola maria)
 
   const sair = document.querySelector("input#sair"); // capturando os dados do botão sair 
   sair.addEventListener("click", sairdapagina) //onclick
@@ -100,14 +102,14 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
   function sairdapagina() {
 
     localStorage.removeItem("usuarioLogado")
-    localStorage.removeItem("section")
-    window.location.href = "./login.html"
+	localStorage.removeItem("cont")
+    window.location.href = "index.html"
   }
 
 
-  /*window.addEventListener(`beforeunload`, function () {
-    this.localStorage.removeItem(`usuarioLogado`);
-  });*/
+ // window.addEventListener(`beforeunload`, function () {
+   // this.localStorage.removeItem(`usuarioLogado`);
+ // });
 
   const inputlistarusuarios = document.querySelector("#listarusuarios");
   inputlistarusuarios.addEventListener("click", listarusuarios)
@@ -132,12 +134,13 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
   }
 
 
- for (let index = 0; index < usuarios.length; index++) {
+ for (let x = 0; x < usuarios.length; x++) {
 
-    if (nomepage2 == usuarios[index].nome && usuarios[index].nivel == "1") {
+    if (nomepage2 == usuarios[x].nome && usuarios[x].nivel == "1") {
   const inputdeletarusuarios1 = document.querySelector("#deletarusuarios1");
   inputdeletarusuarios1.addEventListener("click", deletarusuarios1)
-
+		x = usuarios.length;
+ 
   function deletarusuarios1() {
     let lista = document.querySelector(`div.lista`);
     lista.innerHTML = "";
@@ -153,6 +156,15 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
     const inputdeletarusuarios2 = document.querySelector("#deletarusuarios2");
     inputdeletarusuarios2.addEventListener("click", deletarusuarios2)
 
+  }
+		 var nivela= 1;
+}
+ }
+
+  
+
+  if(nivela != 1){
+    document.querySelector(".niveladm").innerHTML="<style>.niveladm{display:none;}</style>"
   }
 
   function deletarusuarios2() {
@@ -173,21 +185,6 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
     }
     listarusuarios();
   }
-  var nivela= 1;
-}
-
-  }
-
-  if(nivela != 1){
-    document.querySelector(".niveladm").innerHTML="<style>.niveladm{display:none;}</style>"
-  }
-    for (let index = userdeletado.length - 1; index >= 0; index--) {
-      if (userdeletado[index] == 1) {
-        usuarios.splice(index, 1);
-      }
-    }
-    listarusuarios();
-  
 
 
 
@@ -233,7 +230,6 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
     }
     let senha2 = document.querySelector(`input.inputsenha2`).value
 
-    if(novousuario.senha.length> 1){
     if (novousuario.senha == senha2) {
 
 
@@ -254,7 +250,7 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
         alert("Usuário já existe no cadastro,digite outro nome")
         adicionarusuarios1()
       }
-    }
+
     } else {
       alert("Senha incorreta")
       adicionarusuarios1()
@@ -276,15 +272,15 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
     lista.innerHTML += "Trocar usuário <br><br>"
     lista.innerHTML += `<form>
                       <label> Nome usário: </label> <br>
-                      <input type="text" class="inputuser"required> <br>
+                      <input type="text" class="inputuser"> <br>
                       <label> Digite a senha atual: </label> <br>
-                      <input type="password" class="inputsenha" required><br>
+                      <input type="password" class="inputsenha"><br>
                       <label> Novo usuário:</label><br>
-                      <input type="text" class="inputuser1"required> <br>
+                      <input type="text" class="inputuser1"> <br>
                       <label> Nova senha:</label><br>
-                      <input type="password" class="inputsenha1"required> <br>
+                      <input type="password" class="inputsenha1"> <br>
                       <label> Confirmar senha:</label><br>
-                      <input type="password" class="inputsenha2"required> <br>
+                      <input type="password" class="inputsenha2"> <br>
                       <input type="button" value="trocar" class="botao" id="trocarsenha">
                      </form>`
 
@@ -302,10 +298,6 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
     let errosenha = 1
     let repitida = 0
     let indice = 0
-    if(nome.length == 0 || nome1.length == 0 || senha.length == 0 || senha1.length == 0 || senha2.length == 0){
-      alert("Obrigatorio preencher todos os campos!")
-      repitida = 1
-    }else{
     for (let index = 0; index < usuarios.length; index++) {
       if (usuarios[index].nome == nome1) {
         if (usuarios[index].nome != nome) {
@@ -313,7 +305,7 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
         }
       }
     }
-  }
+
 
     if (repitida == 0) {
       for (let index = 0; index < usuarios.length; index++) {
@@ -395,10 +387,20 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
 
   }
 
-} else { // tudo relacionado a pag 1
- 
+
+
+
+
+
+
   
-  function testar() {
+
+
+
+
+} else { // tudo relacionado a pag 1
+		 
+function testar() {
     localStorage.setItem("section", 1)
     let nome = (document.querySelector('input#usuario')).value
     let senha1 = (document.querySelector('input#senha')).value
@@ -422,6 +424,13 @@ if (nomepage2 != undefined) { // tudo relacionado a pag 2
 
   }
 }
+
+
+
+
+
+
+
 
 
 
