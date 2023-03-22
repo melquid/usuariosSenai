@@ -173,16 +173,27 @@ if (nomepage2 != undefined ) { // tudo relacionado a pag 2
     for (let index = 0; index < usuarios.length; index++) {
       let checkbox = document.getElementById(`${index}`);
       if (checkbox.checked == true) {
+		  let ff = confirm("TEM CERTEZA QUE DESEJA DELETAR "+ usuarios[index].nome+"?" )
+		  if(ff == false){
+			  alert("cancelado "+ usuarios[index].nome)
+			   userdeletado[index] = 0
+		  }else{
         userdeletado[index] = 1
+			 }
       } else {
         userdeletado[index] = 0
       }
     }
     for (let index = userdeletado.length - 1; index >= 0; index--) {
       if (userdeletado[index] == 1) {
+		   
         usuarios.splice(index, 1);
+			
+		   
       }
+		
     }
+	 
     listarusuarios();
   }
 
