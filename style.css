@@ -95,11 +95,12 @@ header .header .col-4{
 
 
 .navbar ul{
-    display: flex;
+       display: flex;
     column-gap: 20px;
     max-width: 1140px;
-    padding-inline-start:0px;
+    padding-inline-start: 0px;
     width: 100%;
+    flex-wrap: wrap;
     
 }
 .navbar{
@@ -287,7 +288,6 @@ main{
     margin-top: 50px;
     padding-bottom: 400px;
 	max-width: 300px;
-	padding: 40px;
 	height: 170px;
     width: 100%;
     background: rgba(247,247,247,1.00);
@@ -426,9 +426,71 @@ input[type="button"] {
 }
 .colunal2{
 	width: 160px;
+	text-transform: capitalize;
 }
 
 .colunal3{
 	width: 160px;
 }
-
+.linhalh{
+	display: flex;
+	color: black;
+	background: rgba(189,32,34,1.00);
+}
+@media screen and (max-width: 420px) {
+    header .header .col-2,header .header .col-3 {
+   display:none;
+}
+    header .header .col-1,header .header .col-4 {
+        width:50%;
+	}
+    .col-1{
+        padding-left:20px;
+    }
+    .col-4{
+         justify-content: end;
+         padding-right:20px;
+    }
+	.container {
+    display: block;
+  
+}
+	.navbar {
+    padding: 0px 20px;
+}
+	.containerhome {
+    flex-direction: column-reverse;
+}
+	.conteudoimg,.conteudoimg img{
+    text-align: center;
+	border-radius: 0px;
+		width: 100%;
+		height: 100%;
+}
+	.container div h2, .conttres {
+    text-align: justify;
+    padding: 0px 20px;
+    font-weight: 600;
+    color: #787878;
+}
+	.conteudotxt {
+    padding: 0px 20px;
+}
+	.titulo {
+    text-align: center;
+}
+	.section-par {
+  
+  padding-top: 0px;
+  
+}
+	.cont {
+    flex-wrap: wrap;
+}
+	.cont0 {
+    width: 100%!important;
+		padding: 0px 10px !important;
+   
+}
+	
+}
